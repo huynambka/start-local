@@ -1,3 +1,7 @@
+# Change
+
+Just add some env for debug
+
 # 🚀 Try Elasticsearch and Kibana locally
 
 Run Elasticsearch and Kibana on your local machine using a simple shell script. This setup uses [Docker](https://www.docker.com/) behind the scenes to install and run the services.

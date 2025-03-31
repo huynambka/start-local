@@ -723,8 +723,10 @@ if  [ -z "${esonly:-}" ]; then
     volumes:
       - dev-kibana:/usr/share/kibana/data
     ports:
-      - 127.0.0.1:${KIBANA_LOCAL_PORT}:5601
+      - 9229:9229
+      - ${KIBANA_LOCAL_PORT}:5601
     environment:
+      - NODE_OPTIONS=--inspect=0.0.0.0:9229
       - SERVER_NAME=kibana
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
       - ELASTICSEARCH_USERNAME=kibana_system
